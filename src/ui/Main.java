@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.ProductManager;
 
@@ -23,6 +24,9 @@ public class Main extends Application {
         primaryStage.show();
         scene.getStylesheets().add("css/styles.css");
 
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        Pane p = fxmlLoader.load(getClass().getResource("mainPanes.fxml").openStream());
+        Controller controller = (Controller) fxmlLoader.getController();
 
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
@@ -35,29 +39,9 @@ public class Main extends Application {
                         ProductManager.getInstance().nextProductRight();
                         break;
                 }
+                controller.update();
             }
         });
-/*
-        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent event) {
-                switch (event.getCode()) {
-                    case UP:
-                        NodeManager.getInstance().moveTo(UP);
-                        break;
-                    case DOWN:
-                        NodeManager.getInstance().moveTo(DOWN);
-                        break;
-                    case LEFT:
-                        NodeManager.getInstance().moveTo(LEFT);
-                        break;
-                    case RIGHT:
-                        NodeManager.getInstance().moveTo(RIGHT);
-                        break;
-                }
-            }
-        });
-        */
     }
 
 

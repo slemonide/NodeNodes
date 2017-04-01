@@ -42,7 +42,7 @@ public class Controller {
         update();
     }
 
-    private void update() {
+    public void update() {
         Product product1 = ProductManager.getInstance().getCurrentProductLeft();
         Product product2 = ProductManager.getInstance().getCurrentProductRight();
 
