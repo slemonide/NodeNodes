@@ -48,24 +48,4 @@
         <Label fx:id="os2"/>
         <Label fx:id="weight2"/>
     </VBox>
-
-    <!--
-    <WebView fx:id="center" layoutX="100.0" layoutY="176.0" prefHeight="800.0" prefWidth="600.0"
-             GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-
-    <WebView fx:id="left" layoutX="100.0" layoutY="176.0" prefHeight="800.0" prefWidth="600.0"
-             GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-
-
-    <WebView fx:id="right" layoutX="100.0" layoutY="176.0" prefHeight="800.0" prefWidth="600.0"
-             GridPane.columnIndex="2" GridPane.rowIndex="1"/>
-             -->
-
-<!--
-    <WebView fx:id="top" layoutX="100.0" layoutY="176.0" prefHeight="400.0" prefWidth="600.0"
-             GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-
-
-    <WebView fx:id="bottom" layoutX="100.0" layoutY="176.0" prefHeight="400.0" prefWidth="600.0"
-             GridPane.columnIndex="1" GridPane.rowIndex="2"/>-->
 </GridPane>

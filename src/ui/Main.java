@@ -29,16 +29,11 @@ public class Main extends Application {
             public void handle(KeyEvent event) {
                 switch (event.getCode()){
                     case LEFT:
-                        ProductManager.getInstance().getPreviousProductRight();
+                        ProductManager.getInstance().nextProductLeft();
                         break;
                     case RIGHT:
-                        ProductManager.getInstance().getNextProductRight();
+                        ProductManager.getInstance().nextProductRight();
                         break;
-                    case UP:
-                        ProductManager.getInstance().getPreviousProductLeft();
-                        break;
-                    case DOWN:
-                        ProductManager.getInstance().getNextProductLeft();
                 }
             }
         });

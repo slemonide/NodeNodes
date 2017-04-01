@@ -64,14 +64,12 @@ public class ProductManager{
     }
 
 
-    public Product getNextProductLeft(){
+    public void nextProductLeft(){
         products1.add(generateRandomProduct());
-        return getCurrentProductLeft();
     }
 
-    public Product getNextProductRight(){
+    public void nextProductRight(){
         products2.add(generateRandomProduct());
-        return getCurrentProductRight();
     }
 
     public Product getPreviousProductLeft(){

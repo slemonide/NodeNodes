@@ -70,5 +70,4 @@ public class Controller {
         os2.setText(product2.getOS());
         weight2.setText(Double.toString(product2.getWeight()));
     }
-
 }
