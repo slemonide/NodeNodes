@@ -16,12 +16,13 @@ import javafx.stage.Stage;
 
 public class WebViewSample extends Application {
     private Scene scene;
+
     @Override public void start(Stage stage) {
         // create the scene
         stage.setTitle("Web View");
         scene = new Scene(new Browser(),900,600, Color.web("#666970"));
         stage.setScene(scene);
-        scene.getStylesheets().add("/css/hideRelations.css");
+
         stage.show();
     }
 
@@ -39,6 +40,7 @@ class Browser extends Region {
         getStyleClass().add("browser");
         // load the web page
         webEngine.load("file:///" + System.getProperty("user.dir") + "/data/bio/main.html");
+        //webEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
         //add the web view to the scene
         getChildren().add(browser);
 

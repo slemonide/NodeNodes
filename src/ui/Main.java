@@ -16,13 +16,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        // NodeManager initialization
-
 
         // Graphics initialization
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("NodeSpace");
         primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 
