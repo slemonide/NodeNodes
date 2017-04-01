@@ -64,4 +64,16 @@ public class Controller {
         rightEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
 
     }
+
+    public static void updateRight() {
+        System.out.println(NodeManager.getInstance().getPageAt(RIGHT));
+        rightEngine.load(NodeManager.getInstance().getPageAt(RIGHT));
+        rightEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+    }
+
+    public static void updateLeft() {
+        System.out.println(NodeManager.getInstance().getPageAt(LEFT));
+        leftEngine.load(NodeManager.getInstance().getPageAt(LEFT));
+        leftEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+    }
 }

@@ -1,9 +1,11 @@
 package ui;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -18,6 +20,20 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
         primaryStage.show();
+
+        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                switch (event.getCode()) {
+                    case LEFT:
+                        Controller.updateLeft();
+                        break;
+                    case RIGHT:
+                        Controller.updateRight();
+                        break;
+                }
+            }
+        });
 /*
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override

@@ -14,7 +14,7 @@
 </div>
 
 
-<center>  <img src="https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10573/10573801.jpg"
+<center>  <img id="img" src="https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10573/10573801.jpg"
      style="width: 254px; height:228px"  /></center>
 
 <div id="specs">
@@ -40,5 +40,57 @@
 <p id="weight"> 2.62 kg</p>
 
 </div>
+
+<script>
+        titles = ["Dell 15.6 Gaming Laptop", "Neo Hardcore Edition",
+                  "ASUS ROG Strix GL753 17.3 Gaming Laptop",
+                  "Asus Plus", "Not Apple 12.3"];
+        document.getElementById("laptoptitle").innerHTML = titles[Math.floor(Math.random()*titles.length)];
+
+
+
+        document.getElementById("price").innerHTML = "$ " + (1000 + Math.floor(Math.random() * 900)) + ".99";
+        screenSizes = [15.6, 17.3, 14.6, 12.1, 10.1];
+        document.getElementById("screenSize").innerHTML = screenSizes[Math.floor(Math.random()*screenSizes.length)];
+
+
+        screenResolutions = ["1920 x 1080", "800 x 600", "1024 x 768", "1280 x 720", "7680 x 4320"];
+        document.getElementById("screenResolution").innerHTML =
+        screenResolutions[Math.floor(Math.random()*screenResolutions.length)];
+
+
+
+        document.getElementById("speed").innerHTML = 1 + Math.floor(Math.random() * 5) + "GHz";
+        document.getElementById("ram").innerHTML = 1 + Math.floor(Math.random() * 10) + " GB";
+
+
+
+        capacities = ["1Tb", "500Gb", "2Tb"];
+        document.getElementById("capacity").innerHTML = capacities[Math.floor(Math.random()*capacities.length)];
+        vrs = ["No", "Yes"];
+        document.getElementById("vr").innerHTML = vrs[Math.floor(Math.random()*vrs.length)];
+        graphics = ["Nvidia", "Arm", "Intel"];
+        document.getElementById("vr").innerHTML = graphics[Math.floor(Math.random()*graphics.length)];
+        oss = ["Windows 10 Home 64bit", "Mac Os X Leopard", "Ubuntu LST"];
+        document.getElementById("vr").innerHTML = oss[Math.floor(Math.random()*oss.length)];
+        weight = 1 + Math.floor(Math.random() * 5) + " kg";
+
+        pictures = ["https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10573/10573801.jpg",
+                    "https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10573/10573746_12.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/150x150/105/10583/10583428.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/150x150/106/10605/10605231.png",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/150x150/105/10509/10509311.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/150x150/105/10573/10573746.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10448/10448505.png",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/150x150/103/10395/10395746.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/150x150/105/10584/10584955.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10423/10423844.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10412/10412483.jpg",
+                    "https://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10481/10481596.jpg",
+                    "https://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10481/10481595.jpg"];
+        document.getElementById("img").src = pictures[Math.floor(Math.random()*pictures.length)];
+</script>
+
+
 </body>
 </html>
