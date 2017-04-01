@@ -1,10 +1,13 @@
 package ui;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import model.ProductManager;
 
 public class Main extends Application {
 
@@ -19,26 +22,25 @@ public class Main extends Application {
         primaryStage.setMaximized(true);
         primaryStage.show();
 
-/*
+
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
                 switch (event.getCode()){
                     case LEFT:
-                        ProductManager.getInstance2().getPreviousProduct();
+                        ProductManager.getInstance().getPreviousProductRight();
                         break;
                     case RIGHT:
-                        ProductManager.getInstance2().getNextProduct();
+                        ProductManager.getInstance().getNextProductRight();
                         break;
                     case UP:
-                        ProductManager.getInstance().getPreviousProduct();
+                        ProductManager.getInstance().getPreviousProductLeft();
                         break;
                     case DOWN:
-                        ProductManager.getInstance().getNextProduct();
+                        ProductManager.getInstance().getNextProductLeft();
                 }
             }
         });
-        */
 /*
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
