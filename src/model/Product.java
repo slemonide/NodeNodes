@@ -18,6 +18,7 @@ public class Product {
     public int capacity;
     public String OS;
     public Type a;
+    public boolean like;
     public Product(){
         this.name = name;
         this.price = price;
@@ -80,7 +81,10 @@ public class Product {
     }
 
 
-
+    public boolean pressliketheproduct(){
+        like = true;
+        return like;
+    }
 
 
 

@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class AbstractProductList {
     public Type producttype;
-    public List<Product> b;
+    public List<Product> b,m;
     public Product c,d;
     private int e;
     public double o,g,t;
@@ -93,6 +93,27 @@ public class AbstractProductList {
         }
         return om;
     }
+
+    public void removeAllProducts(){
+        b.removeAll(b);
+    }
+
+    public void addSomeProducts(List<Product> f){
+        b.addAll(f.subList(q,i));
+    }
+
+    public int getNumofProductsAvailable(){
+        int i = 0;
+        for(Product next: m){
+            if(next.getName()==c.getName()){
+                i = i +1;
+            }
+        }
+        return i;
+    }
+
+
+
 
 
 
