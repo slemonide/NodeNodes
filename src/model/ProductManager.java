@@ -10,7 +10,7 @@ public class ProductManager{
 
 
     private ProductManager(){
-
+        //products = new ArrayList<>();
     }
 
     public static ProductManager getInstance(){
