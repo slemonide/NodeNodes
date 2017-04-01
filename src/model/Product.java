@@ -153,4 +153,8 @@ public class Product {
     public Image getImage() {
         return image;
     }
+
+    public double getScreenSize() {
+        return screenSize;
+    }
 }

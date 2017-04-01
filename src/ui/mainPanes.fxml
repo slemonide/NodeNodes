@@ -7,46 +7,45 @@
 
     <VBox GridPane.columnIndex="0" GridPane.rowIndex="0">
         <ImageView fx:id="image1" />
-        <Label id="label" fx:id="price1"/>
-        <Label id="label" fx:id="screenSize1"/>
-        <Label id="label" fx:id="screenRezolution1"/>
-        <Label id="label" fx:id="processorSpeed1"/>
-        <Label id="label" fx:id="ramSize1"/>
-        <Label id="label" fx:id="capacity1"/>
-        <Label id="label" fx:id="vr1"/>
-        <Label id="label" fx:id="graphics1"/>
-        <Label id="label" fx:id="os1"/>
-        <Label id="label" fx:id="weight1"/>
+        <Label fx:id="price1"/>
+        <Label fx:id="screenSize1"/>
+        <Label fx:id="screenRezolution1"/>
+        <Label fx:id="processorSpeed1"/>
+        <Label fx:id="ramSize1"/>
+        <Label fx:id="capacity1"/>
+        <Label fx:id="vr1"/>
+        <Label fx:id="graphics1"/>
+        <Label fx:id="os1"/>
+        <Label fx:id="weight1"/>
     </VBox>
 
     <VBox GridPane.columnIndex="1" GridPane.rowIndex="0">
         <ImageView fx:id="centralImage" />
-        <Label id="label" text="Price:"  />
-        <Label id="label" text="Screen Size:" />
-        <Label id="label" text="Screen Resolution:" />
-        <Label id="label" text="Processor Speed:" />
-        <Label id="label" text="RAM size:" />
-        <Label id="label" text="Capacity:" />
-        <Label id="label" text="VR ready:" />
-        <Label id="label" text="Graphics:" />
-        <Label id="label" text="OS:" />
-        <Label id="label" text="Weight(including battery):" />
+        <Label text="Price:"  />
+        <Label text="Screen Size:" />
+        <Label text="Screen Resolution:" />
+        <Label text="Processor Speed:" />
+        <Label text="RAM size:" />
+        <Label text="Capacity:" />
+        <Label text="VR ready:" />
+        <Label text="Graphics:" />
+        <Label text="OS:" />
+        <Label text="Weight(including battery):" />
     </VBox>
 
     <VBox GridPane.columnIndex="2" GridPane.rowIndex="0">
         <ImageView fx:id="image2" />
-        <Label id="label" fx:id="price2"/>
-        <Label id="label" fx:id="screenSize2"/>
-        <Label id="label" fx:id="screenRezolution2"/>
-        <Label id="label" fx:id="processorSpeed2"/>
-        <Label id="label" fx:id="ramSize2"/>
-        <Label id="label" fx:id="capacity2"/>
-        <Label id="label" fx:id="vr2"/>
-        <Label id="label" fx:id="graphics2"/>
-        <Label id="label" fx:id="os2"/>
-        <Label id="label" fx:id="weight2"/>
+        <Label fx:id="price2"/>
+        <Label fx:id="screenSize2"/>
+        <Label fx:id="screenRezolution2"/>
+        <Label fx:id="processorSpeed2"/>
+        <Label fx:id="ramSize2"/>
+        <Label fx:id="capacity2"/>
+        <Label fx:id="vr2"/>
+        <Label fx:id="graphics2"/>
+        <Label fx:id="os2"/>
+        <Label fx:id="weight2"/>
     </VBox>
-
 
     <!--
     <WebView fx:id="center" layoutX="100.0" layoutY="176.0" prefHeight="800.0" prefWidth="600.0"

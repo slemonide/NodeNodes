@@ -4,34 +4,35 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.Product;
 import model.ProductManager;
 
 public class Controller {
     public ImageView centralImage;
-    
-    public static ImageView image1;
-    public static Label price1;
-    public static Label screenSize1;
-    public static Label screenRezolution1;
-    public static Label processorSpeed1;
-    public static Label ramSize1;
-    public static Label capacity1;
-    public static Label vr1;
-    public static Label graphics1;
-    public static Label os1;
-    public static Label weight1;
 
-    public static ImageView image2;
-    public static Label price2;
-    public static Label screenSize2;
-    public static Label screenRezolution2;
-    public static Label processorSpeed2;
-    public static Label ramSize2;
-    public static Label capacity2;
-    public static Label vr2;
-    public static Label graphics2;
-    public static Label os2;
-    public static Label weight2;
+    @FXML private ImageView image1;
+    @FXML private Label price1;
+    @FXML private Label screenSize1;
+    @FXML private Label screenRezolution1;
+    @FXML private Label processorSpeed1;
+    @FXML private Label ramSize1;
+    @FXML private Label capacity1;
+    @FXML private Label vr1;
+    @FXML private Label graphics1;
+    @FXML private Label os1;
+    @FXML private Label weight1;
+
+    @FXML private ImageView image2;
+    @FXML private Label price2;
+    @FXML private Label screenSize2;
+    @FXML private Label screenRezolution2;
+    @FXML private Label processorSpeed2;
+    @FXML private Label ramSize2;
+    @FXML private Label capacity2;
+    @FXML private Label vr2;
+    @FXML private Label graphics2;
+    @FXML private Label os2;
+    @FXML private Label weight2;
 
     @FXML
     private void initialize()
@@ -43,16 +44,15 @@ public class Controller {
         update();
     }
 
-    public static void update() {
-        /*
-        Product product1 = new Product();//ProductManager.getInstance().getCurrentProductLeft();
-        Product product2 = new Product();//ProductManager.getInstance().getCurrentProductRight();
+    private void update() {
+        Product product1 = ProductManager.getInstance().getCurrentProductLeft();
+        Product product2 = ProductManager.getInstance().getCurrentProductRight();
 
         image1.setImage(product1.getImage());
         price1.setText(Double.toString(product1.getPrice()));
         screenSize1.setText(Double.toString(product1.getScreenSize()));
         screenRezolution1.setText(product1.getScreenResolution());
-        processorSpeed1.setText(Double.toString(product1.getProcessorSPeed()));
+        processorSpeed1.setText(Double.toString(product1.getSpeed()));
         ramSize1.setText(Double.toString(product1.getRAMSize()));
         capacity1.setText(Double.toString(product1.getRAMSize()));
         vr1.setText(product1.getVRready() ? "Yes" : "No");
@@ -64,14 +64,13 @@ public class Controller {
         price2.setText(Double.toString(product2.getPrice()));
         screenSize2.setText(Double.toString(product2.getScreenSize()));
         screenRezolution2.setText(product2.getScreenResolution());
-        processorSpeed2.setText(Double.toString(product2.getProcessorSPeed()));
+        processorSpeed2.setText(Double.toString(product2.getSpeed()));
         ramSize2.setText(Double.toString(product2.getRAMSize()));
         capacity2.setText(Double.toString(product2.getRAMSize()));
         vr2.setText(product2.getVRready() ? "Yes" : "No");
         graphics2.setText(product2.getGraphics());
         os2.setText(product2.getOS());
         weight2.setText(Double.toString(product2.getWeight()));
-        */
     }
 
 }
