@@ -1,18 +1,17 @@
 package ui;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.web.WebView;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import model.NodeManager;
+
+import static model.Direction.*;
 
 public class Main extends Application {
-    WebView centralNode;
-    WebView leftNode;
-    WebView rightNode;
-    WebView topNode;
-    WebView downNode;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -20,9 +19,30 @@ public class Main extends Application {
         // Graphics initialization
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("NodeSpace");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Scene scene = new Scene(root, 300, 275);
+        primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
         primaryStage.show();
+
+        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                switch (event.getCode()) {
+                    case UP:
+                        NodeManager.getInstance().moveTo(UP);
+                        break;
+                    case DOWN:
+                        NodeManager.getInstance().moveTo(DOWN);
+                        break;
+                    case LEFT:
+                        NodeManager.getInstance().moveTo(LEFT);
+                        break;
+                    case RIGHT:
+                        NodeManager.getInstance().moveTo(RIGHT);
+                        break;
+                }
+            }
+        });
     }
 
 
