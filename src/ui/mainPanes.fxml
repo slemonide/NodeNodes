@@ -6,7 +6,7 @@
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
     <VBox GridPane.columnIndex="0" GridPane.rowIndex="0">
-        <ImageView fx:id="image1" />
+        <ImageView fitHeight="200" fitWidth="200" fx:id="image1" />
         <Label fx:id="price1"/>
         <Label fx:id="screenSize1"/>
         <Label fx:id="screenRezolution1"/>
@@ -20,7 +20,7 @@
     </VBox>
 
     <VBox GridPane.columnIndex="1" GridPane.rowIndex="0">
-        <ImageView fx:id="centralImage" />
+        <ImageView fitHeight="200" fitWidth="200" fx:id="centralImage" />
         <Label text="Price:"  />
         <Label text="Screen Size:" />
         <Label text="Screen Resolution:" />
@@ -34,7 +34,7 @@
     </VBox>
 
     <VBox GridPane.columnIndex="2" GridPane.rowIndex="0">
-        <ImageView fx:id="image2" />
+        <ImageView fitHeight="200" fitWidth="200" fx:id="image2" />
         <Label fx:id="price2"/>
         <Label fx:id="screenSize2"/>
         <Label fx:id="screenRezolution2"/>
