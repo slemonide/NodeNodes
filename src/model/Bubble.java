@@ -15,7 +15,7 @@ public class Bubble extends Circle{
     private List<Bubble> subBubbles;
 
     public Bubble(String name){
-        super(150, Color.web("blue", 0.05));
+        super(150, Color.web("blue", 0.98));
         setStrokeType(StrokeType.OUTSIDE);
         setStroke(Color.web("black", 0.16));
         setStrokeWidth(4);
