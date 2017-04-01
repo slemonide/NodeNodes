@@ -8,6 +8,9 @@ import model.NodeManager;
 import static model.Direction.*;
 
 public class Controller {
+    private static WebEngine centerEngine;
+    private static WebEngine leftEngine;
+    private static WebEngine rightEngine;
     @FXML
     private WebView center;
     @FXML
@@ -22,17 +25,22 @@ public class Controller {
     @FXML
     private void initialize()
     {
-        WebEngine centerEngine = center.getEngine();
+        centerEngine = center.getEngine();
         centerEngine.load(NodeManager.getInstance().getCurrentPage());
+        centerEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
 
-        WebEngine leftEngine = left.getEngine();
+        leftEngine = left.getEngine();
         System.out.println(NodeManager.getInstance().getPageAt(LEFT));
         leftEngine.load(NodeManager.getInstance().getPageAt(LEFT));
+        leftEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
 
-        WebEngine rightEngine = right.getEngine();
+
+        rightEngine = right.getEngine();
         System.out.println(NodeManager.getInstance().getPageAt(RIGHT));
         rightEngine.load(NodeManager.getInstance().getPageAt(RIGHT));
+        rightEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
 
+/*
         WebEngine topEngine = top.getEngine();
         System.out.println(NodeManager.getInstance().getPageAt(UP));
         topEngine.load(NodeManager.getInstance().getPageAt(UP));
@@ -40,5 +48,20 @@ public class Controller {
         WebEngine bottomEngine = bottom.getEngine();
         System.out.println(NodeManager.getInstance().getPageAt(DOWN));
         bottomEngine.load(NodeManager.getInstance().getPageAt(DOWN));
+        */
+    }
+
+    public static void update() {
+        centerEngine.load(NodeManager.getInstance().getCurrentPage());
+        centerEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+
+        System.out.println(NodeManager.getInstance().getPageAt(LEFT));
+        leftEngine.load(NodeManager.getInstance().getPageAt(LEFT));
+        leftEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+
+        System.out.println(NodeManager.getInstance().getPageAt(RIGHT));
+        rightEngine.load(NodeManager.getInstance().getPageAt(RIGHT));
+        rightEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+
     }
 }
