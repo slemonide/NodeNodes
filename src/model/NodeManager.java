@@ -22,9 +22,7 @@ public class NodeManager {
      * Singleton pattern
      */
     private NodeManager() {
-        currentPage = "./data/bio/main.html";
-
-        initializeChildren(currentPage);
+        currentPage = "file:///" + System.getProperty("user.dir") + "/data/bio/main.html";
     }
 
     /**
@@ -44,7 +42,7 @@ public class NodeManager {
         }
     }
 
-    static public NodeManager getInstance() {
+    public static NodeManager getInstance() {
         if(instance == null) {
             instance = new NodeManager();
         }
@@ -55,11 +53,21 @@ public class NodeManager {
      * @return current page URL
      */
     public String getCurrentPage() {
+        initializeChildren(currentPage);// TODO: cut it out man
         return currentPage;
     }
 
     public void setPageAt(Direction direction, String url) {
-        // stub
+        switch (direction) {
+            case UP:
+                topPage = url;
+            case DOWN:
+                downPage = url;
+            case LEFT:
+                leftPage = url;
+            case RIGHT:
+                rightPage = url;
+        }
     }
 
     /**

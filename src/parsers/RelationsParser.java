@@ -61,7 +61,8 @@ public class RelationsParser extends DefaultHandler {
         }
 
         if (link != null && relation !=null) {
-            NodeManager.getInstance().setPageAt(relation, link);
+            NodeManager.getInstance().setPageAt(relation,
+                    "file:///" + System.getProperty("user.dir") + "/data/bio/" + link);
         }
     }
 }
