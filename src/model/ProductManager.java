@@ -11,12 +11,18 @@ public class ProductManager{
     private int current2;
     private List<Product> favourites;
 
+    private Product testProduct1;
+    private Product testProduct2;
+
 
     private ProductManager(){
         products = new ArrayList<>();
         current = 0;
         current2 = 0;
         favourites = new ArrayList<>();
+        products.add(new Product());
+        products.add(new Product());
+        //initializeProducts();
     }
 
     public static ProductManager getInstance(){
@@ -26,16 +32,34 @@ public class ProductManager{
         return instance;
     }
 
+    /*
+    public void initializeProducts(){
+        testProduct1 = new Product();
+        testProduct1.setPrice(1399.99);
+        testProduct1.setName();
+    }
+    */
+
+    public void setProducts(List<Product> products){
+        this.products = products;
+    }
+
     public void addProduct(Product p){
         products.add(p);
     }
 
     public Product getCurrentProductLeft(){
-        return products.get(current);
+        if(0<=current && current<products.size()){
+            return products.get(current);
+        }
+        return null;
     }
 
     public Product getCurrentProductRight(){
-        return products.get(current2);
+        if(0<=current2 && current2<products.size()){
+            return products.get(current2);
+        }
+        return null;
     }
 
 
