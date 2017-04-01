@@ -20,18 +20,7 @@ public class Product {
     public Type a;
     public boolean like;
     public Product(){
-        this.name = name;
-        this.price = price;
-        this.VRready = VRready;
-        this.screensize = screensize;
-        this.speed = speed;
-        this.graphics = graphics;
-        this.weight = weight;
-        this.capacity = capacity;
-        this.OS = OS;
-        this.a = a;
-        this.screenresolution = screenresolution;
-        this.RAMSize = RAMSize;
+         //
     }
 
 
@@ -85,6 +74,54 @@ public class Product {
         like = true;
         return like;
     }
+
+
+    public void setPrice(double price){
+        this.price = price;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setVReady(boolean VRready){
+        this.VRready = VRready;
+    }
+
+    public void setScreensize(double screensize){
+        this.screensize = screensize;
+    }
+
+    public void setProcessSpeed(double speed){
+        this.speed = speed;
+    }
+
+    public void setGraphics(String graphics){
+        this.graphics = graphics;
+    }
+
+    public void setWeight(double weight){
+        this.weight = weight;
+    }
+
+    public void setCapacity(int capacity){
+        this.capacity = capacity;
+    }
+
+    public void setOS(String OS){
+        this.OS = OS;
+    }
+
+    public void setType(Type a){
+        this.a =a;
+    }
+
+    public void SetRamSize(double ramsize){
+        this.RAMSize = ramsize;
+    }
+
+
+
 
 
 
