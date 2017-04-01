@@ -4,8 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import model.Product;
-import model.ProductManager;
 
 public class Controller {
     public ImageView centralImage;
@@ -43,32 +41,34 @@ public class Controller {
     }
 
     public static void update() {
-        Product product1 = ProductManager.getInstance().getCurrentProductLeft();
-        Product product2 = ProductManager.getInstance().getCurrentProductRight();
+        /*
+        Product product1 = new Product();//ProductManager.getInstance().getCurrentProductLeft();
+        Product product2 = new Product();//ProductManager.getInstance().getCurrentProductRight();
 
-        image1 = new ImageView(product1.getImage());
-        price1 = new Label(Double.toString(product1.getPrice()));
-        screenSize1 = new Label(Double.toString(product1.getScreenSize()));
-        screenRezolution1 = new Label(product1.getScreenResolution());
-        processorSpeed1 = new Label(Double.toString(product1.getProcessorSPeed()));
-        ramSize1 = new Label(Double.toString(product1.getRAMSize()));
-        capacity1 = new Label(Double.toString(product1.getRAMSize()));
-        vr1 = new Label(product1.getVRready() ? "Yes" : "No");
-        graphics1 = new Label(product1.getGraphics());
-        os1 = new Label(product1.getOS());
-        weight1 = new Label(Double.toString(product1.getWeight()));
+        image1.setImage(product1.getImage());
+        price1.setText(Double.toString(product1.getPrice()));
+        screenSize1.setText(Double.toString(product1.getScreenSize()));
+        screenRezolution1.setText(product1.getScreenResolution());
+        processorSpeed1.setText(Double.toString(product1.getProcessorSPeed()));
+        ramSize1.setText(Double.toString(product1.getRAMSize()));
+        capacity1.setText(Double.toString(product1.getRAMSize()));
+        vr1.setText(product1.getVRready() ? "Yes" : "No");
+        graphics1.setText(product1.getGraphics());
+        os1.setText(product1.getOS());
+        weight1.setText(Double.toString(product1.getWeight()));
 
-        image2 = new ImageView(product2.getImage());
-        price2 = new Label(Double.toString(product2.getPrice()));
-        screenSize2 = new Label(Double.toString(product2.getScreenSize()));
-        screenRezolution2 = new Label(product2.getScreenResolution());
-        processorSpeed2 = new Label(Double.toString(product2.getProcessorSPeed()));
-        ramSize2 = new Label(Double.toString(product2.getRAMSize()));
-        capacity2 = new Label(Double.toString(product2.getRAMSize()));
-        vr2 = new Label(product2.getVRready() ? "Yes" : "No");
-        graphics2 = new Label(product2.getGraphics());
-        os2 = new Label(product2.getOS());
-        weight2 = new Label(Double.toString(product2.getWeight()));
+        image2.setImage(product2.getImage());
+        price2.setText(Double.toString(product2.getPrice()));
+        screenSize2.setText(Double.toString(product2.getScreenSize()));
+        screenRezolution2.setText(product2.getScreenResolution());
+        processorSpeed2.setText(Double.toString(product2.getProcessorSPeed()));
+        ramSize2.setText(Double.toString(product2.getRAMSize()));
+        capacity2.setText(Double.toString(product2.getRAMSize()));
+        vr2.setText(product2.getVRready() ? "Yes" : "No");
+        graphics2.setText(product2.getGraphics());
+        os2.setText(product2.getOS());
+        weight2.setText(Double.toString(product2.getWeight()));
+        */
     }
 
 }
