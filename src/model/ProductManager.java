@@ -9,14 +9,17 @@ import java.util.List;
 public class ProductManager{
 
     private static ProductManager instance;
+    private static ProductManager instance2;
     private List<Product> products;
     private int current;       //index of current selected product
+    private int current2;
     private List<Product> favourites;
 
 
     private ProductManager(){
         products = new ArrayList<>();
         current = 0;
+        current2 = 0;
         favourites = new ArrayList<>();
     }
 
@@ -27,25 +30,43 @@ public class ProductManager{
         return instance;
     }
 
+    public static ProductManager getInstance2(){
+        if(instance2 == null){
+            instance2 = new ProductManager();
+        }
+        return instance2;
+    }
+
     public void addProduct(Product p){
         products.add(p);
     }
 
-    public Product getCurrentProduct(){
-        return products.get(current);
+    private int distinguishInstance(){
+        if (this == instance){
+            return current;
+        }else{
+            return current2;
+        }
     }
 
-    //REQUIRES: non-empty list, index less than size of list - 1
+    public Product getCurrentProduct(){
+        int i = distinguishInstance();
+        return products.get(i);
+    }
+
+
     public Product getNextProduct(){
-        if(current<products.size()-1) {
-            return products.get(current + 1);
+        int i = distinguishInstance();
+        if(i<products.size()-1) {
+            return products.get(i + 1);
         }
-        return null;
+        return products.get(0);
     }
 
     public Product getPreviousProduct(){
-        if(current>0 && current < products.size()){
-            return products.get(current - 1);
+        int i = distinguishInstance();
+        if(i>0 && i < products.size()){
+            return products.get(i - 1);
         }
         return null;
     }
