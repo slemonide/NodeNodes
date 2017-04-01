@@ -86,7 +86,7 @@ public class AbstractProductList {
         List<Product> om = new ArrayList<>();
         for(Product next: b){
             if(next.getVRready()==c.getVRready()||next.getRAMSize()==c.getRAMSize()||next.getOS()==c.getOS()
-                    ||o<next.getWeight()&&next.getWeight()<g||next.getScreenresolution()==c.getScreenresolution()
+                    ||o<next.getWeight()&&next.getWeight()<g||next.getScreenResolution()==c.getScreenResolution()
                     ||q<next.getCapacity()&& next.getCapacity()<i||next.getGraphics()==c.getGraphics()){
                 om.add(next);
             }

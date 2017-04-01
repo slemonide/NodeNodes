@@ -4,7 +4,6 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 import parsers.RelationsParser;
-import ui.Controller;
 
 import java.io.IOException;
 
@@ -87,7 +86,7 @@ public class NodeManager {
                 currentPage = rightPage;
         }
 
-        Controller.update();
+        //Controller.update();
         initializeChildren(currentPage);
     }
 

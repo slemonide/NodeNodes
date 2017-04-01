@@ -1,11 +1,50 @@
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.web.WebView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
 <GridPane fx:controller="ui.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <ImageView fx:id="image1" />
+        <Label fx:id="price1"/>
+        <Label fx:id="screenSize1"/>
+        <Label fx:id="screenRezolution1"/>
+        <Label fx:id="processorSpeed1"/>
+        <Label fx:id="ramSize1"/>
+        <Label fx:id="capacity1"/>
+        <Label fx:id="vr1"/>
+        <Label fx:id="graphics1"/>
+        <Label fx:id="os1"/>
+        <Label fx:id="weight1"/>
+    </VBox>
 
+    <VBox GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <ImageView fx:id="centralImage" />
+        <Label text="Price:"/>
+        <Label text="Screen Size:"/>
+        <Label text="Screen Resolution:"/>
+        <Label text="Processor Speed:"/>
+        <Label text="RAM size:"/>
+        <Label text="Capacity:"/>
+        <Label text="VR ready:"/>
+        <Label text="Graphics:"/>
+        <Label text="OS:"/>
+        <Label text="Weight(including battery):"/>
+    </VBox>
 
+    <VBox GridPane.columnIndex="2" GridPane.rowIndex="0">
+        <ImageView fx:id="image2" />
+        <Label fx:id="price2"/>
+        <Label fx:id="screenSize2"/>
+        <Label fx:id="screenRezolution2"/>
+        <Label fx:id="processorSpeed2"/>
+        <Label fx:id="ramSize2"/>
+        <Label fx:id="capacity2"/>
+        <Label fx:id="vr2"/>
+        <Label fx:id="graphics2"/>
+        <Label fx:id="os2"/>
+        <Label fx:id="weight2"/>
+    </VBox>
 
 
     <!--

@@ -1,5 +1,7 @@
 package model;
 
+import javafx.scene.image.Image;
+
 import java.lang.reflect.Type;
 
 /**
@@ -19,6 +21,10 @@ public class Product {
     public String OS;
     public Type a;
     public boolean like;
+    private Image image;
+    private double screenSize;
+    private double processorSPeed;
+
     public Product(){
          //
     }
@@ -45,7 +51,7 @@ public class Product {
         return RAMSize;
     }
 
-    public String getScreenresolution(){
+    public String getScreenResolution(){
         return screenresolution;
     }
 
@@ -121,19 +127,15 @@ public class Product {
     }
 
 
+    public Image getImage() {
+        return image;
+    }
 
+    public double getscreenSize() {
+        return screenSize;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public double getProcessorSPeed() {
+        return processorSPeed;
+    }
 }

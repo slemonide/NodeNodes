@@ -19,7 +19,7 @@ public class ProductManager{
         favourites = new ArrayList<>();
     }
 
-    public static ProductManager getInstance(){
+    public static ProductManager getInstance1(){
         if(instance == null){
             instance = new ProductManager();
         }
