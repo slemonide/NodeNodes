@@ -50,6 +50,9 @@ public class ProductManager{
         testProduct1.setType("Laptop");
         testProduct1.setRAMSize(8.0);
         testProduct1.setScreenResolution("1920 x 1080");
+
+        testProduct2 = new Product("Asus ROG Strix GL753", 1499.99, true, 17.3, "1920 x 1080", 2.8, "NVIDIA GTX1050Ti",
+                2.99, 16, 1024, "Windows 10 Home 64bit", "Laptop", new Image("https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10573/10573746_12.jpg"));
     }
 
 

@@ -9,13 +9,13 @@ public class Product {
     public String name;
     public double price;
     public boolean VRready;
-    public double screenSize;
-    public String screenResolution;
-    public double speed;
+    public double screenSize;   //inches
+    public String screenResolution;  // w x h
+    public double speed;    //GHz
     public String graphics;
-    public double weight;
-    public double RAMSize;
-    public int capacity;
+    public double weight;   // kg
+    public double RAMSize;  //Gb
+    public int capacity;    //Gb
     public String OS;
     public String type;
     private Image image;

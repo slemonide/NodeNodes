@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.ProductManager;
 
 public class Controller {
     public ImageView centralImage;
@@ -36,6 +37,8 @@ public class Controller {
     private void initialize()
     {
         centralImage.setImage(new Image("https://s3.amazonaws.com/piktochartv2-dev/v2/uploads/9d0773b3-d92e-41cb-979c-06f284ad0a4b/4a62671f940494f7f2dcf8ae583246852f024a76_original.png"));
+
+        ProductManager.getInstance().initializeProducts();
 
         update();
     }
