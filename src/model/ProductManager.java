@@ -3,13 +3,9 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Ray on 2017-04-01.
- */
 public class ProductManager{
 
     private static ProductManager instance;
-    private static ProductManager instance2;
     private List<Product> products;
     private int current;       //index of current selected product
     private int current2;
@@ -30,68 +26,64 @@ public class ProductManager{
         return instance;
     }
 
-    public static ProductManager getInstance2(){
-        if(instance2 == null){
-            instance2 = new ProductManager();
-        }
-        return instance2;
-    }
-
     public void addProduct(Product p){
         products.add(p);
     }
 
-    private int distinguishInstance(){
-        if (this == instance){
-            return current;
-        }else{
-            return current2;
+    public Product getCurrentProductLeft(){
+        return products.get(current);
+    }
+
+    public Product getCurrentProductRight(){
+        return products.get(current2);
+    }
+
+
+    public Product getNextProductLeft(){
+        if (current < products.size()) {
+            current++;
         }
+        current = 0;
+        return getCurrentProductLeft();
     }
 
-    public Product getCurrentProduct(){
-        int i = distinguishInstance();
-        return products.get(i);
-    }
-
-
-    public Product getNextProduct(){
-        if(this == instance) {
-            if (current < products.size()) {
-                current++;
-            }
-            current = 0;
-            return getCurrentProduct();
-        }else{
-            if (current2 < products.size()) {
-                current2++;
-            }
-            current2 = 0;
-            return getCurrentProduct();
+    public Product getNextProductRight(){
+        if( current2 < products.size()){
+            current2++;
         }
+        current2 = 0;
+        return getCurrentProductRight();
     }
 
-    public Product getPreviousProduct(){
-        if(distinguishInstance()< products.size())
-            if(this == instance) {
-                if (current > 0) {
-                    current--;
-               }
-                current = products.size() - 1;
-                return getCurrentProduct();
-            }else{
-                if (current2 > 0) {
-                    current2--;
-                }
-                current2 = products.size() - 1;
-                return getCurrentProduct();
+    public Product getPreviousProductLeft(){
+        if((current< products.size())&&current > 0) {
+            current--;
         }
+        current = products.size() - 1;
+        return getCurrentProductLeft();
     }
 
-    public void toggleFavourites(){
-        Product p = getCurrentProduct();
+    public Product getPreviousProductRight(){
+        if((current2< products.size())&&current2 > 0) {
+            current2--;
+        }
+        current2 = products.size() - 1;
+        return getCurrentProductLeft();
+    }
+
+    public void toggleFavouriteLeft(){
+        Product p = getCurrentProductLeft();
         if(!favourites.contains(p)){
         favourites.add(p);}
+        else{
+            favourites.remove(p);
+        }
+    }
+
+    public void toggleFavouriteRight(){
+        Product p = getCurrentProductRight();
+        if(!favourites.contains(p)){
+            favourites.add(p);}
         else{
             favourites.remove(p);
         }

@@ -31,13 +31,13 @@ public class Main extends Application {
                         ProductManager.getInstance2().getPreviousProduct();
                         break;
                     case RIGHT:
-                        ProductManager.getInstance2().getPreviousProduct();
+                        ProductManager.getInstance2().getNextProduct();
                         break;
                     case UP:
                         ProductManager.getInstance().getPreviousProduct();
                         break;
                     case DOWN:
-                        ProductManager.getInstance().getNextProduct()
+                        ProductManager.getInstance().getNextProduct();
                 }
             }
         });
