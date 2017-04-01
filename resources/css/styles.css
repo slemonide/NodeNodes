@@ -1,6 +1,6 @@
 #relations { display: none; }
 
-p {
+Label {
     font-family: Helvetica ;
     border-style: solid;
     border-width: 2px 10px 4px;
@@ -11,6 +11,21 @@ p {
     padding: 10px;
     border-color: powderblue;
 }
+
+/* trying to add style to our new fxml for the Comparison
+.Label{
+    font-family: Helvetica ;
+    color: #000099;
+    text-align: center;
+
+    width: 350px;
+    height: 10px;
+    padding: 10px;
+    border-color: powderblue;
+}
+}
+
+
 #laptoptitle{
 
     text-align: center;
@@ -30,5 +45,4 @@ text-align: center;
     font-family: Helvetica ;
     color: #000099;
     text-align: center;
-}
-}
+}*/

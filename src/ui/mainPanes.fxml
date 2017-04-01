@@ -20,16 +20,16 @@
 
     <VBox GridPane.columnIndex="1" GridPane.rowIndex="0">
         <ImageView fx:id="centralImage" />
-        <Label text="Price:"/>
-        <Label text="Screen Size:"/>
-        <Label text="Screen Resolution:"/>
-        <Label text="Processor Speed:"/>
-        <Label text="RAM size:"/>
-        <Label text="Capacity:"/>
-        <Label text="VR ready:"/>
-        <Label text="Graphics:"/>
-        <Label text="OS:"/>
-        <Label text="Weight(including battery):"/>
+        <Label text="Price:"  />
+        <Label text="Screen Size:" style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;" />
+        <Label text="Screen Resolution:" style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;" />
+        <Label text="Processor Speed:" style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;" />
+        <Label text="RAM size:" style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;" />
+        <Label text="Capacity:" style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;" />
+        <Label text="VR ready:" style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;" />
+        <Label text="Graphics:" style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;" />
+        <Label text="OS:" style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;" />
+        <Label text="Weight(including battery):" style=" -fx-border-color:black; -fx-border-width: 2; -fx-border-style: solid;" />
     </VBox>
 
     <VBox GridPane.columnIndex="2" GridPane.rowIndex="0">

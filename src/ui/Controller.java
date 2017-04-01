@@ -70,4 +70,5 @@ public class Controller {
         weight2 = new Label(Double.toString(product2.getWeight()));
         */
     }
+
 }
