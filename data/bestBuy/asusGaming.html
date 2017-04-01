@@ -39,6 +39,12 @@
 
     <p id="weight"> 2.62 kg</p>
 
+    <p id="processortype">Intel Quad-Core N3710</p>
+
+    <p id="batterytype">Lithium-Ion</p>
+
+    <p id="batterycapacity">41 Wh</p>
+
 </div>
 
 <script>
@@ -54,7 +60,7 @@
         document.getElementById("screenSize").innerHTML = screenSizes[Math.floor(Math.random()*screenSizes.length)];
 
 
-        screenResolutions = ["1920 x 1080", "800 x 600", "1024 x 768", "1280 x 720", "7680 x 4320"];
+        screenResolutions = ["1920 x 1080", "800 x 600", "1024 x 768", "1280 x 720", "7680 x 4320","1366 x 768"];
         document.getElementById("screenResolution").innerHTML =
         screenResolutions[Math.floor(Math.random()*screenResolutions.length)];
 
@@ -62,6 +68,20 @@
 
         document.getElementById("speed").innerHTML = 1 + Math.floor(Math.random() * 5) + "GHz";
         document.getElementById("ram").innerHTML = 1 + Math.floor(Math.random() * 10) + " GB";
+
+        processortype = ["Intel Quad-Core N3710","Intel Core i5-7200U","Intel Core i7-7500U","Intel Celeron N3060", "Intel Core i5-6200U"];
+
+        batterytype = ["Lithium-Ion","4-Cell Lithium-ion Battery","4-cell Li-ion","6-cell Li-ion Battery"];
+
+        batterylife = [4,5.5,4.5];
+
+        batterycapacity = [50,60,41,42,23];
+        document.getElementById("batterycapacity").interHTML = batterycapacity[Math.floor(Math.random()*60)]+ "Wh";
+        document.getElementById("batterytype").interHTML = batterytype[Math.floor(Math.random()*batterytype.length)];
+        document.getElementById("batterylife").interHTML =  batterylife[Math.floor(Math.random()*4)]+ "hours";
+
+        document.getElementById("processortype").interHTML = processortype[Math.floor(Math.random()*processortype.length)];
+
 
 
 
@@ -87,7 +107,16 @@
                     "http://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10423/10423844.jpg",
                     "http://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10412/10412483.jpg",
                     "https://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10481/10481596.jpg",
-                    "https://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10481/10481595.jpg"];
+                    "https://multimedia.bbycastatic.ca/multimedia/products/150x150/104/10481/10481595.jpg",
+                    "https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10573/10573747.jpg",
+                    "https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10528/10528527.jpg",
+                    "https://multimedia.bbycastatic.ca/multimedia/products/500x500/105/10551/10551545.jpeg",
+                    "https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10528/10528336.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/500x500/105/10528/10528342.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/500x500/105/10528/10528341.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/500x500/103/10360/10360535.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/500x500/104/10497/10497398.jpg",
+                    "http://multimedia.bbycastatic.ca/multimedia/products/500x500/104/10481/10481595.jpg"];
         document.getElementById("img").src = pictures[Math.floor(Math.random()*pictures.length)];
 </script>
 
