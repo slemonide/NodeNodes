@@ -56,19 +56,36 @@ public class ProductManager{
 
 
     public Product getNextProduct(){
-        int i = distinguishInstance();
-        if(i<products.size()-1) {
-            return products.get(i + 1);
+        if(this == instance) {
+            if (current < products.size()) {
+                current++;
+            }
+            current = 0;
+            return getCurrentProduct();
+        }else{
+            if (current2 < products.size()) {
+                current2++;
+            }
+            current2 = 0;
+            return getCurrentProduct();
         }
-        return products.get(0);
     }
 
     public Product getPreviousProduct(){
-        int i = distinguishInstance();
-        if(i>0 && i < products.size()){
-            return products.get(i - 1);
+        if(distinguishInstance()< products.size())
+            if(this == instance) {
+                if (current > 0) {
+                    current++;
+               }
+                current = products.size() - 1;
+                return getCurrentProduct();
+            }else{
+                if (current2 > 0) {
+                    current2++;
+                }
+                current2 = products.size() - 1;
+                return getCurrentProduct();
         }
-        return null;
     }
 
     public void toggleFavourites(){
