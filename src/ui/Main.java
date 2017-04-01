@@ -1,15 +1,10 @@
 package ui;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
-import model.NodeManager;
-
-import static model.Direction.*;
 
 public class Main extends Application {
 
@@ -17,13 +12,13 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
         // Graphics initialization
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("mainPanes.fxml"));
         primaryStage.setTitle("NodeSpace");
         Scene scene = new Scene(root, 300, 275);
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
         primaryStage.show();
-
+/*
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -43,6 +38,7 @@ public class Main extends Application {
                 }
             }
         });
+        */
     }
 
 
