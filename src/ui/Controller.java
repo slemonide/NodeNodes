@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.Product;
+import model.ProductManager;
 
 public class Controller {
     public ImageView centralImage;
@@ -41,7 +43,6 @@ public class Controller {
     }
 
     public static void update() {
-        /*
         Product product1 = ProductManager.getInstance().getCurrentProductLeft();
         Product product2 = ProductManager.getInstance().getCurrentProductRight();
 
@@ -68,7 +69,6 @@ public class Controller {
         graphics2 = new Label(product2.getGraphics());
         os2 = new Label(product2.getOS());
         weight2 = new Label(Double.toString(product2.getWeight()));
-        */
     }
 
 }
