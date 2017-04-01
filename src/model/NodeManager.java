@@ -22,7 +22,7 @@ public class NodeManager {
      * Singleton pattern
      */
     private NodeManager() {
-        currentPage = "file:///" + System.getProperty("user.dir") + "/data/bio/main.html";
+        currentPage = "file:///" + System.getProperty("user.dir") + "/data/bestBuy/main.html";
     }
 
     /**
