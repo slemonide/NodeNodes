@@ -20,15 +20,23 @@ public class Product {
     public int capacity;
     public String OS;
     public Type a;
-    public boolean like;
     private Image image;
     private double screenSize;
     private double processorSPeed;
 
     public Product(){
-         //
+         name = "";
+         price = 0;
+         VRready = false;
+         screensize = 0;
+         screenresolution = "";
+         speed = 0;
+         graphics = "";
+         weight = 0;
+         RAMSize = 0;
+         capacity = 0;
+         OS = "";
     }
-
 
     public String getName(){
         return name;
@@ -42,7 +50,6 @@ public class Product {
         return weight;
     }
 
-
     public String getOS(){
         return OS;
     }
@@ -51,9 +58,7 @@ public class Product {
         return RAMSize;
     }
 
-    public String getScreenResolution(){
-        return screenresolution;
-    }
+    public String getScreenResolution(){ return screenresolution; }
 
     public String getGraphics(){
         return graphics;
@@ -61,10 +66,6 @@ public class Product {
 
     public double getSpeed(){
         return speed;
-    }
-
-    public Type getType(){
-        return a;
     }
 
     public boolean getVRready(){
@@ -75,12 +76,7 @@ public class Product {
         return price;
     }
 
-
-    public boolean pressliketheproduct(){
-        like = true;
-        return like;
-    }
-
+    public void setImage(Image image) {this.image = image;}
 
     public void setPrice(double price){
         this.price = price;
@@ -94,7 +90,7 @@ public class Product {
         this.VRready = VRready;
     }
 
-    public void setScreensize(double screensize){
+    public void setScreenSize(double screensize){
         this.screensize = screensize;
     }
 
@@ -119,19 +115,18 @@ public class Product {
     }
 
     public void setType(Type a){
-        this.a =a;
+        this.a = a;
     }
 
-    public void SetRamSize(double ramsize){
+    public void setRAMSize(double ramsize){
         this.RAMSize = ramsize;
     }
-
 
     public Image getImage() {
         return image;
     }
 
-    public double getscreenSize() {
+    public double getScreenSize() {
         return screenSize;
     }
 

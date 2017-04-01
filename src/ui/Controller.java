@@ -4,8 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import model.Product;
-import model.ProductManager;
 
 public class Controller {
     public ImageView centralImage;
@@ -43,12 +41,13 @@ public class Controller {
     }
 
     public static void update() {
+        /*
         Product product1 = ProductManager.getInstance().getCurrentProductLeft();
         Product product2 = ProductManager.getInstance().getCurrentProductRight();
 
         image1 = new ImageView(product1.getImage());
         price1 = new Label(Double.toString(product1.getPrice()));
-        screenSize1 = new Label(Double.toString(product1.getscreenSize()));
+        screenSize1 = new Label(Double.toString(product1.getScreenSize()));
         screenRezolution1 = new Label(product1.getScreenResolution());
         processorSpeed1 = new Label(Double.toString(product1.getProcessorSPeed()));
         ramSize1 = new Label(Double.toString(product1.getRAMSize()));
@@ -60,7 +59,7 @@ public class Controller {
 
         image2 = new ImageView(product2.getImage());
         price2 = new Label(Double.toString(product2.getPrice()));
-        screenSize2 = new Label(Double.toString(product2.getscreenSize()));
+        screenSize2 = new Label(Double.toString(product2.getScreenSize()));
         screenRezolution2 = new Label(product2.getScreenResolution());
         processorSpeed2 = new Label(Double.toString(product2.getProcessorSPeed()));
         ramSize2 = new Label(Double.toString(product2.getRAMSize()));
@@ -69,5 +68,6 @@ public class Controller {
         graphics2 = new Label(product2.getGraphics());
         os2 = new Label(product2.getOS());
         weight2 = new Label(Double.toString(product2.getWeight()));
+        */
     }
 }
