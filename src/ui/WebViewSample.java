@@ -21,7 +21,7 @@ public class WebViewSample extends Application {
         stage.setTitle("Web View");
         scene = new Scene(new Browser(),900,600, Color.web("#666970"));
         stage.setScene(scene);
-        //scene.getStylesheets().add("webviewsample/BrowserToolbar.css");
+        scene.getStylesheets().add("/css/hideRelations.css");
         stage.show();
     }
 
@@ -38,7 +38,7 @@ class Browser extends Region {
         //apply the styles
         getStyleClass().add("browser");
         // load the web page
-        webEngine.load("http://www.oracle.com/products/index.html");
+        webEngine.load("file:///" + System.getProperty("user.dir") + "/data/bio/main.html");
         //add the web view to the scene
         getChildren().add(browser);
 

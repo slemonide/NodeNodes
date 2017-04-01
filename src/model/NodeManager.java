@@ -1,19 +1,25 @@
 package model;
 
-import javax.swing.text.html.HTML;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Keeps information about the current node and its children
  */
 public class NodeManager {
     private static NodeManager instance;
-    private HTML currentPage;
+    private URL currentPage;
 
     /**
      * Singleton pattern
      */
     private NodeManager() {
-        currentPage = new HTML();
+        try {
+            currentPage = new URL("file://data/bio/main.html");
+        } catch (MalformedURLException e) {
+            System.out.println("Wrong URL!");
+            e.printStackTrace();
+        }
     }
 
     public NodeManager getInstance() {
@@ -23,13 +29,24 @@ public class NodeManager {
         return instance;
     }
 
-    public HTML getCurrentPage() {
-        return null; // stub
+    /**
+     * @return current page URL
+     */
+    public URL getCurrentPage() {
+        return currentPage;
     }
 
+    /**
+     * Shift the pages
+     * @param direction to move to
+     */
     public void moveTo(Direction direction) {}
 
-    public HTML getPageAt(Direction direction) {
+    /**
+     * @param direction of the page relative to the current page
+     * @return URL of a page at the given direction
+     */
+    public URL getPageAt(Direction direction) {
         return null; // stub
     }
 
