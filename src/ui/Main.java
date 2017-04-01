@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
+import model.ProductManager;
 
 public class Main extends Application {
 
@@ -20,17 +21,24 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
         primaryStage.show();
+        scene.getStylesheets().add("css/styles.css");
+
 
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                switch (event.getCode()) {
+                switch (event.getCode()){
                     case LEFT:
-                        Controller.updateLeft();
+                        ProductManager.getInstance().getPreviousProductRight();
                         break;
                     case RIGHT:
-                        Controller.updateRight();
+                        ProductManager.getInstance().getNextProductRight();
                         break;
+                    case UP:
+                        ProductManager.getInstance().getPreviousProductLeft();
+                        break;
+                    case DOWN:
+                        ProductManager.getInstance().getNextProductLeft();
                 }
             }
         });

@@ -1,77 +1,76 @@
 package ui;
 
 import javafx.fxml.FXML;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
-import model.NodeManager;
-
-import static model.Direction.*;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import model.Product;
+import model.ProductManager;
 
 public class Controller {
-    private static WebEngine centerEngine;
-    private static WebEngine leftEngine;
-    private static WebEngine rightEngine;
-    @FXML
-    private WebView center;
-    @FXML
-    private WebView left;
-    @FXML
-    private WebView right;
-    @FXML
-    private WebView top;
-    @FXML
-    private WebView bottom;
+    public ImageView centralImage;
+
+    @FXML private ImageView image1;
+    @FXML private Label price1;
+    @FXML private Label screenSize1;
+    @FXML private Label screenRezolution1;
+    @FXML private Label processorSpeed1;
+    @FXML private Label ramSize1;
+    @FXML private Label capacity1;
+    @FXML private Label vr1;
+    @FXML private Label graphics1;
+    @FXML private Label os1;
+    @FXML private Label weight1;
+
+    @FXML private ImageView image2;
+    @FXML private Label price2;
+    @FXML private Label screenSize2;
+    @FXML private Label screenRezolution2;
+    @FXML private Label processorSpeed2;
+    @FXML private Label ramSize2;
+    @FXML private Label capacity2;
+    @FXML private Label vr2;
+    @FXML private Label graphics2;
+    @FXML private Label os2;
+    @FXML private Label weight2;
 
     @FXML
     private void initialize()
     {
-        centerEngine = center.getEngine();
-        centerEngine.load(NodeManager.getInstance().getCurrentPage());
-        centerEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+        centralImage.setImage(new Image("https://s3.amazonaws.com/piktochartv2-dev/v2/uploads/9d0773b3-d92e-41cb-979c-06f284ad0a4b/4a62671f940494f7f2dcf8ae583246852f024a76_original.png"));
 
-        leftEngine = left.getEngine();
-        System.out.println(NodeManager.getInstance().getPageAt(LEFT));
-        leftEngine.load(NodeManager.getInstance().getPageAt(LEFT));
-        leftEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+        ProductManager.getInstance().initializeProducts();
 
-
-        rightEngine = right.getEngine();
-        System.out.println(NodeManager.getInstance().getPageAt(RIGHT));
-        rightEngine.load(NodeManager.getInstance().getPageAt(RIGHT));
-        rightEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
-
-/*
-        WebEngine topEngine = top.getEngine();
-        System.out.println(NodeManager.getInstance().getPageAt(UP));
-        topEngine.load(NodeManager.getInstance().getPageAt(UP));
-
-        WebEngine bottomEngine = bottom.getEngine();
-        System.out.println(NodeManager.getInstance().getPageAt(DOWN));
-        bottomEngine.load(NodeManager.getInstance().getPageAt(DOWN));
-        */
+        update();
     }
 
-    public static void update() {
-        centerEngine.load(NodeManager.getInstance().getCurrentPage());
-        centerEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+    private void update() {
+        Product product1 = ProductManager.getInstance().getCurrentProductLeft();
+        Product product2 = ProductManager.getInstance().getCurrentProductRight();
 
-        System.out.println(NodeManager.getInstance().getPageAt(LEFT));
-        leftEngine.load(NodeManager.getInstance().getPageAt(LEFT));
-        leftEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+        image1.setImage(product1.getImage());
+        price1.setText(Double.toString(product1.getPrice()));
+        screenSize1.setText(Double.toString(product1.getScreenSize()));
+        screenRezolution1.setText(product1.getScreenResolution());
+        processorSpeed1.setText(Double.toString(product1.getSpeed()));
+        ramSize1.setText(Double.toString(product1.getRAMSize()));
+        capacity1.setText(Double.toString(product1.getRAMSize()));
+        vr1.setText(product1.getVRready() ? "Yes" : "No");
+        graphics1.setText(product1.getGraphics());
+        os1.setText(product1.getOS());
+        weight1.setText(Double.toString(product1.getWeight()));
 
-        System.out.println(NodeManager.getInstance().getPageAt(RIGHT));
-        rightEngine.load(NodeManager.getInstance().getPageAt(RIGHT));
-        rightEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
-
+        image2.setImage(product2.getImage());
+        price2.setText(Double.toString(product2.getPrice()));
+        screenSize2.setText(Double.toString(product2.getScreenSize()));
+        screenRezolution2.setText(product2.getScreenResolution());
+        processorSpeed2.setText(Double.toString(product2.getSpeed()));
+        ramSize2.setText(Double.toString(product2.getRAMSize()));
+        capacity2.setText(Double.toString(product2.getRAMSize()));
+        vr2.setText(product2.getVRready() ? "Yes" : "No");
+        graphics2.setText(product2.getGraphics());
+        os2.setText(product2.getOS());
+        weight2.setText(Double.toString(product2.getWeight()));
     }
 
-    public static void updateRight() {
-        rightEngine.load(NodeManager.getInstance().getPageAt(RIGHT));
-        rightEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
-    }
-
-    public static void updateLeft() {
-        leftEngine.load(NodeManager.getInstance().getPageAt(LEFT));
-        leftEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
-    }
 }
