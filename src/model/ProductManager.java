@@ -75,13 +75,13 @@ public class ProductManager{
         if(distinguishInstance()< products.size())
             if(this == instance) {
                 if (current > 0) {
-                    current++;
+                    current--;
                }
                 current = products.size() - 1;
                 return getCurrentProduct();
             }else{
                 if (current2 > 0) {
-                    current2++;
+                    current2--;
                 }
                 current2 = products.size() - 1;
                 return getCurrentProduct();
