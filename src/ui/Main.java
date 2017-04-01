@@ -21,6 +21,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
         primaryStage.show();
+        scene.getStylesheets().add("css/styles.css");
 
 
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
