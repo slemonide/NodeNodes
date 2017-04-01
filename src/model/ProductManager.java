@@ -1,5 +1,7 @@
 package model;
 
+import javafx.scene.image.Image;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,13 +34,24 @@ public class ProductManager{
         return instance;
     }
 
-    /*
+
     public void initializeProducts(){
         testProduct1 = new Product();
         testProduct1.setPrice(1399.99);
-        testProduct1.setName();
+        testProduct1.setName("Dell 15.6 Gaming Laptop");
+        testProduct1.setImage(new Image( "https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10573/10573801.jpg"));
+        testProduct1.setVRready(false);
+        testProduct1.setScreenSize(15.6);
+        testProduct1.setProcessSpeed(2.8);
+        testProduct1.setGraphics("NVIDIA GeForce GTX 1050 Ti with 4GB GDDR5");
+        testProduct1.setWeight(2.62);
+        testProduct1.setCapacity(1024); //ASK EYLUL
+        testProduct1.setOS("Windows 10 Home 64bit");
+        testProduct1.setType("Laptop");
+        testProduct1.setRAMSize(8.0);
+        testProduct1.setScreenResolution("1920 x 1080");
     }
-    */
+
 
     public void setProducts(List<Product> products){
         this.products = products;
