@@ -26,15 +26,19 @@ public class Controller {
         centerEngine.load(NodeManager.getInstance().getCurrentPage());
 
         WebEngine leftEngine = left.getEngine();
+        System.out.println(NodeManager.getInstance().getPageAt(LEFT));
         leftEngine.load(NodeManager.getInstance().getPageAt(LEFT));
 
         WebEngine rightEngine = right.getEngine();
+        System.out.println(NodeManager.getInstance().getPageAt(RIGHT));
         rightEngine.load(NodeManager.getInstance().getPageAt(RIGHT));
 
         WebEngine topEngine = top.getEngine();
+        System.out.println(NodeManager.getInstance().getPageAt(UP));
         topEngine.load(NodeManager.getInstance().getPageAt(UP));
 
         WebEngine bottomEngine = bottom.getEngine();
+        System.out.println(NodeManager.getInstance().getPageAt(DOWN));
         bottomEngine.load(NodeManager.getInstance().getPageAt(DOWN));
     }
 }
