@@ -69,11 +69,18 @@ public class Controller {
         System.out.println(NodeManager.getInstance().getPageAt(RIGHT));
         rightEngine.load(NodeManager.getInstance().getPageAt(RIGHT));
         rightEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+        updateMiddle();
     }
 
     public static void updateLeft() {
         System.out.println(NodeManager.getInstance().getPageAt(LEFT));
         leftEngine.load(NodeManager.getInstance().getPageAt(LEFT));
         leftEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
+        updateMiddle();
+    }
+
+    private static void updateMiddle() {
+        centerEngine.load(NodeManager.getInstance().getCurrentPage());
+        centerEngine.setUserStyleSheetLocation("file:///" + System.getProperty("user.dir") + "/resources/css/styles.css");
     }
 }
