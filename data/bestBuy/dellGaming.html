@@ -15,29 +15,29 @@
 
 
 <center>  <img id="img" src="https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10573/10573801.jpg"
-     style="width: 254px; height:228px"  /></center>
+               style="width: 254px; height:228px"  /></center>
 
 <div id="specs">
 
-<p id="price"> $ 1399.99</p>
+    <p id="price"> $ 1399.99</p>
 
-<p id="screenSize"> 15.6 in</p>
+    <p id="screenSize"> 15.6 in</p>
 
-<p id="screenResolution"> 1920 x 1080</p>
+    <p id="screenResolution"> 1920 x 1080</p>
 
-<p id="speed"> 2.8GHz</p>
+    <p id="speed"> 2.8GHz</p>
 
-<p id="ram"> 8 GB</p>
+    <p id="ram"> 8 GB</p>
 
-<p id="capacity"> 1Tb</p>
+    <p id="capacity"> 1Tb</p>
 
-<p id="vr"> No</p>
+    <p id="vr"> No</p>
 
-<p id="graphics"> NVIDIA GeForce GTX 1050 Ti with 4GB GDDR5 </p>
+    <p id="graphics"> NVIDIA GeForce GTX 1050 Ti with 4GB GDDR5 </p>
 
-<p id="os">  Windows 10 Home 64bit</p>
+    <p id="os">  Windows 10 Home 64bit</p>
 
-<p id="weight"> 2.62 kg</p>
+    <p id="weight"> 2.62 kg</p>
 
 </div>
 
@@ -70,9 +70,9 @@
         vrs = ["No", "Yes"];
         document.getElementById("vr").innerHTML = vrs[Math.floor(Math.random()*vrs.length)];
         graphics = ["Nvidia", "Arm", "Intel"];
-        document.getElementById("vr").innerHTML = graphics[Math.floor(Math.random()*graphics.length)];
+        document.getElementById("graphics").innerHTML = graphics[Math.floor(Math.random()*graphics.length)];
         oss = ["Windows 10 Home 64bit", "Mac Os X Leopard", "Ubuntu LST"];
-        document.getElementById("vr").innerHTML = oss[Math.floor(Math.random()*oss.length)];
+        document.getElementById("oss").innerHTML = oss[Math.floor(Math.random()*oss.length)];
         document.getElementById("weight").innerHTML = 1 + Math.floor(Math.random() * 5 * 10) / 10 + " kg";
 
         pictures = ["https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/105/10573/10573801.jpg",
