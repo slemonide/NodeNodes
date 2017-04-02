@@ -59,7 +59,7 @@ public class RelationsParser extends DefaultHandler {
                 relation = RIGHT;
                 break;
         }
-
+        System.out.println(data);
         if (link != null && relation !=null) {
             NodeManager.getInstance().setPageAt(relation,
                     "file:///" + System.getProperty("user.dir") + "/data/bestBuy/" + link);

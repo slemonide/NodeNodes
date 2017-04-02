@@ -17,28 +17,43 @@
 <br />
 <div id="specs">
 
-    <p id="price">Price:</p>
+    <p id="price">Price: </p>
 
-<p id="screenSize">Screen Size:</p>
+<p id="screenSize">Screen Size: <img id="ss" height="13" width="13" src="left.png"/> </p>
 
-<p id="screenResolution">   Screen Resolution:</p>
+<p id="screenResolution">Screen Resolution: <img id="sr" height="13" width="13" src="left.png"/> </p>
 
-<p id="speed">   Processor Speed:</p>
+<p id="speed">Processor Speed: </p>
 
-<p id="ram">   RAM size:</p>
+<p id="ram">RAM size: </p>
 
-<p id="capacity">  Capacity:</p>
+<p id="capacity">Capacity: </p>
 
-<p id="vr">   VR ready:</p>
+<p id="vr">VR ready: <img id="vvr" height="13" width="13" src="left.png"/> </p>
 
-<p id="graphics">   Graphics:</p>
+<p id="graphics">Graphics: <img id="gr" height="13" width="13" src="left.png"/> </p>
 
-<p id="os">   OS:</p>
+<p id="os">OS: <img id="oos" height="13" width="13" src="left.png"/> </p>
 
-<p id="weight">    Weight(including battery):</p>
+<p id="weight">Weight(including battery): </p>
 
 
 </div>
+
+<script>
+    document.getElementById("price").innerHTML = "Price: $ " + (-500 + Math.floor(Math.random() * 1000)) + ".99";
+    document.getElementById("speed").innerHTML = "Processor Speed: " + (-2 + Math.floor(Math.random() * 4)) + "GHz";
+    document.getElementById("ram").innerHTML = "RAM size: " + (-4 + Math.floor(Math.random() * 8)) + "GB";
+    document.getElementById("capacity").innerHTML = "Capacity: " + (-500 + Math.floor(Math.random() * 1000)) + "GB";
+    document.getElementById("weight").innerHTML = "Weight(including battery): "
+    + (-1 + Math.floor(Math.random() * 2 * 10)) / 10 + "kg";
+
+    document.getElementById("ss").src = (Math.random() > 0.5 ? "left.png" : "right.png")
+    document.getElementById("sr").src = (Math.random() > 0.5 ? "left.png" : "right.png")
+    document.getElementById("vvr").src = (Math.random() > 0.5 ? "left.png" : "right.png")
+    document.getElementById("gr").src = (Math.random() > 0.5 ? "left.png" : "right.png")
+    document.getElementById("oos").src = (Math.random() > 0.5 ? "left.png" : "right.png")
+</script>
 
 </body>
 
